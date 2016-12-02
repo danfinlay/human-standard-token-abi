@@ -1,0 +1,25 @@
+{
+  "name": "human-standard-token-abi",
+  "version": "1.0.0",
+  "description": "A simple node module that exports the [Ethereum ABI](1) for [ERC 20](2) compatible tokens.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Finlay",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flyswatter/human-standard-token-abi.git"
+  },
+  "keywords": [
+    "Ethereum",
+    "Token",
+    "Json",
+    "Abi"
+  ],
+  "bugs": {
+    "url": "https://github.com/flyswatter/human-standard-token-abi/issues"
+  },
+  "homepage": "https://github.com/flyswatter/human-standard-token-abi#readme"
+}
