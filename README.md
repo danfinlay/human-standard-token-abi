@@ -2,17 +2,20 @@
 
 A simple node module that exports the [Ethereum ABI][1] for [ERC 20][2] compatible tokens.
 
+Requires the web3 API to be available, either by initailizing it yourself, or using a web3-injecting Javascript environment, like Geth, MetaMask, or Mist.
+
 ## Usage
 
 ``` javascript
 var abi = require('human-standard-token-abi')
 
 var token = web3.eth.contract(abi).at(contractAddress)
+var addr = web3.eth.accounts[0]
 
 // Get the token name
-token.name.call({from: addr}, function(err, name) {
+token.name.call(function(err, name) {
   if(err) { console.log(err) }
-  if(name) { console.log(name) }
+  if(name) { console.log('The token name is: ' + name) }
 })
 
 // Get the token symbol
@@ -24,6 +27,21 @@ token.symbol.call({from: addr}, function(err, symbol) {
 
 token.totalSupply.call({from: addr}, function(err, totalSupply) {
   console.log(totalSupply)
+})
+
+token.balanceOf.call(web3.eth.accounts[0], function (err, bal) {
+  if (err) { console.error(err) }
+  console.log('balance is ' + bal.toString(10))
+})
+
+var value = '100' // Base 10, accounts for decimals.
+token.transfer(toAddress, value, { from: addr }, function (err, txHash) {
+  if (err) console.error(err)
+
+  if (txHash) {
+    console.log('Transaction sent')
+    console.dir(txHash)
+  }
 })
 
 ```
