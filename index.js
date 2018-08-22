@@ -80,7 +80,7 @@ module.exports = [
     "outputs": [
       {
         "name": "",
-        "type": "uint8"
+        "type": "uint256"
       }
     ],
     "payable": false,
