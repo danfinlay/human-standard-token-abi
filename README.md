@@ -58,5 +58,5 @@ Then visit that port, probably something like: `http://localhost:8080/example`.
 
 If you edit `example/index.js`, you'll have to rebuild by running `npm run build`.
 
-[1]: https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI
+[1]: https://solidity.readthedocs.io/en/develop/abi-spec.html
 [2]: https://github.com/ethereum/EIPs/issues/20
